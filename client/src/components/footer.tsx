@@ -46,7 +46,7 @@ export default function Footer() {
 							Merdeka Creation
 						</h1>
 						<p className="text-xs text-justify">
-							©2022 Copyright: Merdeka Creation Sdn Bhd. All Rights Reserved.
+							©2024 Copyright: Merdeka Creation Sdn Bhd. All Rights Reserved.
 						</p>
 					</div>
 				</div>

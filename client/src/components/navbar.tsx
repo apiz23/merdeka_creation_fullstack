@@ -43,13 +43,16 @@ export default function Navbar() {
 			</nav>
 			<Sheet>
 				<SheetTrigger className="fixed top-2 left-0 z-50 block md:hidden">
-					<Button className="bg-transparent dark:text-white text-black hover:bg-transparent text-3xl pt-4">
+					<Button variant="default" className="text-white text-3xl p-4 m-2 rounded-xl">
 						<TbMenu2 />
 					</Button>
 				</SheetTrigger>
 				<SheetContent side="left" className="w-4/5">
-					<SheetHeader>
-						<SheetTitle>Merdeka Creation</SheetTitle>
+					<SheetHeader className="border-b">
+						<SheetTitle className="font-semibold flex">
+							<img src="/logo.png" alt="logo" className="h-10 w-10" />
+							<p className="font-display p-1">Merdeka Creation</p>
+						</SheetTitle>
 					</SheetHeader>
 					<div className="flex flex-col h-full">
 						<div className="flex-1 overflow-y-auto">
@@ -69,8 +72,8 @@ export default function Navbar() {
 							</ul>
 						</div>
 						<div className="p-4 border-t border-gray-200 dark:border-gray-700">
-							<p className="text-center text-gray-600 dark:text-gray-300">
-								Footer Content
+							<p className="text-center text-gray-600 dark:text-gray-300 text-xs mb-4">
+								©2024 Copyright: Merdeka Creation Sdn Bhd. All Rights Reserved.
 							</p>
 						</div>
 					</div>

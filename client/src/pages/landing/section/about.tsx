@@ -1,5 +1,5 @@
 import TypingAnimation from "@/components/magicui/typing-animation";
-import bg3 from "@/assets/bg3.jpg";
+import bg3 from "@/assets/bg3.png";
 import { Badge } from "@/components/ui/badge";
 import { TbBrandShopee, TbBrandTiktok } from "react-icons/tb";
 import { Globe } from "lucide-react";
@@ -9,7 +9,7 @@ export default function About() {
 		<>
 			<div className="bg-gradient-to-b from-yellow-100 to-white">
 				<div className="md:block hidden min-h-screen"></div>
-				<div className="min-h-screen py-96" id="about">
+				<div className="min-h-screen py-52" id="about">
 					<div className="grid grid-cols-2 md:grid-cols-10 gap-4 p-4">
 						<div className="col-span-4 ps-4">
 							<img src={bg3} alt="image" className="" />
@@ -29,7 +29,7 @@ export default function About() {
 								significant occasion. Celebrate Merdeka with style and pride!
 							</p>
 
-							<h1 className="text-4xl mb-2 font-semibold">Keyword</h1>
+							<h1 className="text-4xl text-center md:text-left mb-4 font-semibold">Keyword</h1>
 							<div className="flex w-full flex-wrap gap-x-3 gap-y-2 mb-10">
 								<Badge variant="default">Merdeka Collection</Badge>
 								<Badge variant="default">Corporate Company</Badge>
@@ -37,7 +37,7 @@ export default function About() {
 								<Badge variant="default">Partnership</Badge>
 								<Badge variant="default">E-Commerce</Badge>
 							</div>
-							<h1 className="text-4xl mb-2 font-semibold">Platform</h1>
+							<h1 className="text-4xl text-center md:text-left mb-4 font-semibold">Platform</h1>
 							<div className="flex w-full flex-wrap gap-x-3 gap-y-2">
 								<Badge variant="default" className="bg-orange-600 gap-2">
 									<TbBrandShopee className="h-6 w-6" />
