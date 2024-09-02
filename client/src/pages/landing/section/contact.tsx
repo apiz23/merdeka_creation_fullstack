@@ -6,6 +6,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { MdOutlineEmail } from "react-icons/md";
+import { ConfettiButton } from "@/components/magicui/confetti";
+import confetti from "canvas-confetti";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 export default function Contact() {
 	const { register, handleSubmit } = useForm();
@@ -29,6 +32,7 @@ export default function Contact() {
 
 			if (response.ok) {
 				toast.success("Email sent successfully!");
+				triggerConfetti();
 			} else {
 				toast.error("Failed to send email");
 			}
@@ -67,7 +71,7 @@ export default function Contact() {
 	return (
 		<>
 			<div
-				className="min-h-screen pt-36 px-2 bg-gradient-to-b from-white to-yellow-50"
+				className="min-h-screen pt-36 px-2 bg-gradient-to-b from-yellow-100 to-yellow-50"
 				id="contact"
 			>
 				<div className="max-w-2xl mx-auto">
@@ -76,9 +80,11 @@ export default function Contact() {
 						text="Contact Us"
 					/>
 				</div>
-				<div className="bg-white grid md:grid-cols-2 grid-cols-1 gap-4 max-w-4xl md:mt-5 mx-auto p-6 rounded-xl shadow-lg border border-neutral-300">
+
+				<div className="relative bg-white grid md:grid-cols-2 grid-cols-1 gap-4 max-w-4xl md:mt-5 mx-auto p-6 rounded-xl shadow-lg border border-neutral-300">
+					<BorderBeam size={350} duration={12} delay={9} />
 					<div className="block">
-						<MdOutlineEmail className="h-[300px] w-[300px] mx-auto" />
+						<MdOutlineEmail className="h-[150px] md:h-[300px] w-[150px] md:w-[300px] mx-auto" />
 						<p className="font-semibold text-center">Send Us an Email</p>
 					</div>
 					<form className="space-y-4" onSubmit={handleSubmit(onSubmit, onError)}>
@@ -135,4 +141,33 @@ export default function Contact() {
 			</div>
 		</>
 	);
+}
+
+export function triggerConfetti() {
+	const end = Date.now() + 3 * 1000;
+	const colors = ["#ff0000", "#0000ff", "#ffff00", "#d1d5db"];
+	const frame = () => {
+		if (Date.now() > end) return;
+
+		confetti({
+			particleCount: 2,
+			angle: 60,
+			spread: 55,
+			startVelocity: 60,
+			origin: { x: 0, y: 0.5 },
+			colors: colors,
+		});
+		confetti({
+			particleCount: 2,
+			angle: 120,
+			spread: 55,
+			startVelocity: 60,
+			origin: { x: 1, y: 0.5 },
+			colors: colors,
+		});
+
+		requestAnimationFrame(frame);
+	};
+
+	frame();
 }

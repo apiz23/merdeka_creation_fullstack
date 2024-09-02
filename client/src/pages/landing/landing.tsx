@@ -3,6 +3,7 @@ import About from "./section/about";
 import Contact from "./section/contact";
 import Hero from "./section/hero";
 import Product from "./section/product";
+import FAQ from "./section/faq";
 
 export default function Landing() {
 	return (
@@ -10,6 +11,7 @@ export default function Landing() {
 			<Hero />
 			<About />
 			<Product />
+			<FAQ />
 			<Contact />
 			<Footer />
 		</>

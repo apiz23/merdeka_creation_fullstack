@@ -110,8 +110,8 @@ const ParallaxImages = () => {
 				src="https://i.pinimg.com/564x/1d/04/45/1d0445b1090ddbb03af21b8cbde44686.jpg"
 				alt="Orbiting satellite"
 				start={20}
-				end={-700}
-				className="ml-24 w-5/12"
+				end={-300}
+				className="ml-28 w-5/12"
 			/>
 		</div>
 	);

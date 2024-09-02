@@ -7,7 +7,7 @@ import { Globe } from "lucide-react";
 export default function About() {
 	return (
 		<>
-			<div className="bg-gradient-to-b from-yellow-100 to-white">
+			<div className="bg-gradient-to-b from-yellow-100 to-red-600/70">
 				<div className="md:block hidden min-h-screen"></div>
 				<div className="min-h-screen py-52" id="about">
 					<div className="grid grid-cols-2 md:grid-cols-10 gap-4 p-4">
@@ -19,7 +19,7 @@ export default function About() {
 								className="lg:text-7xl text-black dark:text-white font-bold inter-var text-center uppercase"
 								text="About Us"
 							/>
-							<p className="text-justify py-10 tracking-wide leading-7 font-serif px-2.5">
+							<p className="text-justify text-sm md:text-xl py-10 tracking-wide leading-7 font-serif px-2.5">
 								Welcome to Merdeka Creation, your go-to platform for all things Merdeka!
 								We bring you a curated selection of products and merchandise celebrating
 								Malaysia's Independence Day. Partnering with sellers across the country,

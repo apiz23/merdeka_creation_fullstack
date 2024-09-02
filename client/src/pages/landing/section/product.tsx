@@ -82,10 +82,13 @@ const cards: CardType[] = [
 
 export default function Product() {
 	return (
-		<div className="min-h-screen pt-20" id="product">
+		<div
+			className="min-h-screen pt-20 bg-gradient-to-b from-red-600/70 to-white"
+			id="product"
+		>
 			<div className="max-w-4xl mx-auto">
 				<TypingAnimation
-					className="lg:text-7xl text-black dark:text-white font-bold inter-var text-center uppercase"
+					className="lg:text-7xl text-black leading-[2.3rem] dark:text-white font-bold inter-var text-center uppercase"
 					text="Product Collection"
 				/>
 			</div>
@@ -122,7 +125,7 @@ const Card = ({ card }: { card: CardType }) => {
 				<img
 					alt="pic"
 					src={card.urlPic}
-					className="rounded-bl-3xlrounded-tr-3xl object-cover h-[55vh] md:h-[60vh] w-full transition-transform duration-300 group-hover:scale-110"
+					className="rounded-bl-3xlrounded-tr-3xl object-cover h-[50vh] md:h-[60vh] w-full transition-transform duration-300 group-hover:scale-110"
 				/>
 
 				<div className="mt-10 sm:flex sm:items-center sm:justify-center sm:gap-4">
@@ -146,7 +149,7 @@ const Card = ({ card }: { card: CardType }) => {
 						<img
 							alt="pic"
 							src={card.urlPic}
-							className="rounded-bl-3xlrounded-tr-3xl object-cover rounded-lg shadow-xl"
+							className="rounded-bl-3xlrounded-tr-3xl object-cover rounded-lg shadow-xl mb-6"
 						/>
 						<div className="flow-root">
 							<dl className="-my-3 divide-y divide-gray-100 text-sm">
@@ -160,7 +163,7 @@ const Card = ({ card }: { card: CardType }) => {
 								</div>
 							</dl>
 						</div>
-						<Link to={card.url} target="_blank">
+						<Link to={card.url} target="_blank" className="mt-10">
 							<Button variant="default" className="w-full tracking-wider">
 								Buy
 							</Button>
