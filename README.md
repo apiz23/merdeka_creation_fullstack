@@ -1,5 +1,5 @@
 # Merdeka Creation
-
+![Website Screenshot](/client/src/assets/screenshot-merdeka.png)
 Merdeka Creation is a corporate-themed website designed to showcase and sell Merdeka-themed merchandise. The site features various collections related to Malaysia's Merdeka Day, providing a seamless and engaging experience for visitors.
 
 ## Introduction
@@ -19,6 +19,12 @@ Merdeka Creation celebrates Malaysia's Merdeka Day with a range of themed mercha
   - [Tailwind CSS](https://tailwindcss.com/) for styling
   - .[ShadCn UI](https://ui.shadcn.com/docs) for component
   - [Framer Motion](https://www.framer.com/api/motion/) for animations
+  
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,vite,tailwind" />
+  </a>
+</p>
 
 - **Backend:** 
   - [Express.js](https://expressjs.com/) (for backend logic)
