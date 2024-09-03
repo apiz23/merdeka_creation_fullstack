@@ -1,4 +1,3 @@
-import SparklesText from "@/components/magicui/sparkles-text";
 import TypingAnimation from "@/components/magicui/typing-animation";
 import {
 	Accordion,

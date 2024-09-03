@@ -6,7 +6,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { MdOutlineEmail } from "react-icons/md";
-import { ConfettiButton } from "@/components/magicui/confetti";
 import confetti from "canvas-confetti";
 import { BorderBeam } from "@/components/magicui/border-beam";
 
@@ -19,7 +18,7 @@ export default function Contact() {
 		subject: string,
 		message: string
 	) => {
-		try {
+		const emailPromise = async () => {
 			const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 			const response = await fetch(`${backendUrl}/merdeka-creation/send-email`, {
@@ -31,14 +30,20 @@ export default function Contact() {
 			});
 
 			if (response.ok) {
-				toast.success("Email sent successfully!");
-				triggerConfetti();
+				return "Email sent successfully!";
 			} else {
-				toast.error("Failed to send email");
+				throw new Error("Failed to send email");
 			}
-		} catch (error) {
-			toast.error("Error sending email");
-		}
+		};
+
+		toast.promise(emailPromise(), {
+			loading: "Sending email...",
+			success: (message) => {
+				triggerConfetti();
+				return message;
+			},
+			error: "Failed to send email",
+		});
 	};
 
 	const onSubmit = async (data: any) => {
@@ -71,7 +76,7 @@ export default function Contact() {
 	return (
 		<>
 			<div
-				className="min-h-screen pt-36 px-2 bg-gradient-to-b from-yellow-100 to-yellow-50"
+				className="min-h-screen pt-36 px-2 bg-gradient-to-b from-yellow-100 to-yellow-50 space-y-20"
 				id="contact"
 			>
 				<div className="max-w-2xl mx-auto">
@@ -81,7 +86,7 @@ export default function Contact() {
 					/>
 				</div>
 
-				<div className="relative bg-white grid md:grid-cols-2 grid-cols-1 gap-4 max-w-4xl md:mt-5 mx-auto p-6 rounded-xl shadow-lg border border-neutral-300">
+				<div className="relative bg-white grid md:grid-cols-2 grid-cols-1 gap-4 max-w-6xl md:mt-5 mx-auto p-10 rounded-xl shadow-lg border border-neutral-300">
 					<BorderBeam size={350} duration={12} delay={9} />
 					<div className="block">
 						<MdOutlineEmail className="h-[150px] md:h-[300px] w-[150px] md:w-[300px] mx-auto" />
@@ -89,7 +94,7 @@ export default function Contact() {
 					</div>
 					<form className="space-y-4" onSubmit={handleSubmit(onSubmit, onError)}>
 						<div className="block">
-							<Label>Name</Label>
+							<Label className="mb-2">Name</Label>
 							<Input
 								type="text"
 								placeholder="Ali bin Munir"
@@ -97,7 +102,7 @@ export default function Contact() {
 							/>
 						</div>
 						<div className="block">
-							<Label>Email</Label>
+							<Label className="mb-2">Email</Label>
 							<Input
 								type="email"
 								placeholder="email@provider.com"
@@ -111,7 +116,7 @@ export default function Contact() {
 							/>
 						</div>
 						<div className="block">
-							<Label>Contact Number</Label>
+							<Label className="mb-2">Contact Number</Label>
 							<Input
 								type="text"
 								placeholder="01-234567890"
@@ -125,7 +130,7 @@ export default function Contact() {
 							/>
 						</div>
 						<div className="block">
-							<Label>Message</Label>
+							<Label className="mb-2">Message</Label>
 							<Textarea
 								placeholder="Send your message here"
 								{...register("message", { required: "Message is required" })}

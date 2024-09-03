@@ -90,28 +90,28 @@ const ParallaxImages = () => {
 				alt="An example of a space launch"
 				start={-200}
 				end={200}
-				className="w-1/3"
+				className="w-1/3 rounded-lg shadow-xl"
 			/>
 			<ParallaxImg
 				src={bg2}
 				alt="An example of a space launch"
 				start={50}
 				end={-250}
-				className="mx-auto w-2/3"
+				className="mx-auto w-2/3 rounded-lg shadow-xl"
 			/>
 			<ParallaxImg
 				src="https://plus.unsplash.com/premium_photo-1670855108637-d98722738a92?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmF0aW9uYWwlMjBkYXklMjBtYWxheXNpYXxlbnwwfHwwfHx8MA%3D%3D"
 				alt="Orbiting satellite"
 				start={-200}
 				end={50}
-				className="ml-auto w-1/3"
+				className="ml-auto w-1/3 rounded-lg shadow-xl"
 			/>
 			<ParallaxImg
 				src="https://i.pinimg.com/564x/1d/04/45/1d0445b1090ddbb03af21b8cbde44686.jpg"
 				alt="Orbiting satellite"
 				start={20}
 				end={-300}
-				className="ml-28 w-5/12"
+				className="ml-28 w-5/12 rounded-lg shadow-xl"
 			/>
 		</div>
 	);
