@@ -83,7 +83,7 @@ export function VelocityScroll({
 			} else if (velocityFactor.get() > 0) {
 				directionFactor.current = 1;
 			}
-			console.log(t);
+			t = 1;
 			moveBy += directionFactor.current * moveBy * velocityFactor.get();
 
 			baseX.set(baseX.get() + moveBy);
