@@ -11,9 +11,11 @@ export default function Landing() {
 			<Hero />
 			<About />
 			<Product />
-			<FAQ />
-			<Contact />
-			<Footer />
+			<div className="overflow-x-hidden">
+				<FAQ />
+				<Contact />
+				<Footer />
+			</div>
 		</>
 	);
 }
