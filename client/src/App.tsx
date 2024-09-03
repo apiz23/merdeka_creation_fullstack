@@ -9,7 +9,9 @@ export default function App() {
 	return (
 		<>
 			<Toaster richColors />
-			<StickyCursor />
+			<div className="hidden md:block">
+				<StickyCursor />
+			</div>
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Landing />} />
