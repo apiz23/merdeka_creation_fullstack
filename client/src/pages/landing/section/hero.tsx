@@ -160,7 +160,7 @@ const MerdekaHero = () => {
 			className="h-fit py-36 bg-cover bg-yellow-100"
 			id="home"
 			style={{
-				backgroundImage: "url('./src/assets/bg-hero.svg')",
+				backgroundImage: "url('/src/assets/bg-hero.svg')",
 			}}
 		>
 			<img src="/logo.png" alt="logo" className="h-52 w-52 mx-auto" />
