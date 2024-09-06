@@ -4,11 +4,13 @@ import Navbar from "./components/navbar";
 import StickyCursor from "./components/stickyCursor";
 import NotFound from "./pages/not-found";
 import { Toaster } from "sonner";
+import { Disclaimer } from "./components/disclaimer";
 
 export default function App() {
 	return (
 		<>
-			<Toaster richColors />
+			<Disclaimer />
+			<Toaster richColors expand={true} />
 			<div className="hidden md:block">
 				<StickyCursor />
 			</div>

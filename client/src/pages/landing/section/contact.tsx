@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 import TypingAnimation from "@/components/magicui/typing-animation";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/shadcn/button";
+import { Input } from "@/components/shadcn/input";
+import { Label } from "@/components/shadcn/label";
+import { Textarea } from "@/components/shadcn/textarea";
 import { toast } from "sonner";
 import { MdOutlineEmail } from "react-icons/md";
 import confetti from "canvas-confetti";
@@ -86,7 +86,7 @@ export default function Contact() {
 					/>
 				</div>
 
-				<div className="relative bg-white grid md:grid-cols-2 grid-cols-1 gap-4 max-w-6xl md:mt-5 mx-auto p-10 rounded-xl shadow-lg border border-neutral-300">
+				<div className="relative bg-white grid md:grid-cols-2 grid-cols-1 gap-4 max-w-6xl md:mt-5 mx-auto p-10 mb-5 rounded-xl shadow-lg border border-neutral-300">
 					<BorderBeam size={350} duration={12} delay={9} />
 					<div className="block">
 						<MdOutlineEmail className="h-[150px] md:h-[300px] w-[150px] md:w-[300px] mx-auto" />

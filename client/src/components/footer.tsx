@@ -7,8 +7,8 @@ export default function Footer() {
 			className="relative h-[800px]"
 			style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
 		>
-			<div className="fixed bottom-0 lg:h-[800px] h-full w-full">
-				<div className="bg-gradient-to-b from-yellow-100 to-yellow-400 py-8 px-12 h-full w-full flex flex-col justify-between">
+			<div className="fixed bottom-0 h-[90%] lg:h-[800px] w-full">
+				<div className="bg-gradient-to-b from-white md:from-yellow-50 to-yellow-400 md:to-yellow-400 py-8 px-12 h-full w-full flex flex-col justify-between">
 					<div className="grid grid-col-1 md:grid-cols-2 md:gap-20">
 						<div className="col-span-1">
 							<section className="grid place-content-start md:place-content-center gap-2 py-14 md:px-8 md:py-24 text-black">
@@ -21,10 +21,10 @@ export default function Footer() {
 						</div>
 						<div className="grid grid-cols-1 py-10 md:px-32 md:py-24 text-right font-semibold">
 							<div className="gap-2 col-span-1">
-								<h3 className="text-2xl mb-2 uppercase text-neutral-600">About</h3>
-								<ul>
+								<h3 className="text-3xl mb-2 uppercase text-neutral-600">About</h3>
+								<ul className="text-lg">
 									<li className="mb-2">
-										<Link to="/" target="_blank" className="hover:text-blue-600">
+										<Link to="/" className="hover:text-blue-600">
 											Home
 										</Link>
 									</li>
@@ -45,7 +45,7 @@ export default function Footer() {
 						<h1 className="text-[7vw] leading-[1] md:leading-[0.8] tracking-tight font-medium pt-10">
 							Merdeka Creation
 						</h1>
-						<p className="text-xs text-justify">
+						<p className="text-md text-justify">
 							©2024 Copyright: Merdeka Creation Sdn Bhd. All Rights Reserved.
 						</p>
 					</div>

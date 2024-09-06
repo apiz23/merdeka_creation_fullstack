@@ -7,8 +7,8 @@ import {
 	SheetHeader,
 	SheetTitle,
 	SheetTrigger,
-} from "@/components/ui/sheet";
-import { Button } from "./ui/button";
+} from "@/components/shadcn/sheet";
+import { Button } from "./shadcn/button";
 import { TbMenu2 } from "react-icons/tb";
 import { Dispatch, SetStateAction, useRef, useState } from "react";
 import { motion } from "framer-motion";

@@ -1,25 +1,25 @@
 import TypingAnimation from "@/components/magicui/typing-animation";
 import bg4 from "@/assets/bg4.png";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/shadcn/badge";
 import { TbBrandShopee, TbBrandTiktok } from "react-icons/tb";
 import { Globe } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/shadcn/card";
 
 export default function About() {
 	return (
 		<>
-			<div className="bg-gradient-to-b from-yellow-100 to-red-600/70">
+			<div className="bg-gradient-to-b from-yellow-100 to-red-600/70 md:pt-10 pt-32">
 				<div className="md:block hidden min-h-screen"></div>
 				<div className="min-h-screen py-44" id="about">
-					<div className="max-w-[80vw] h-4/5 grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
-						<Card className="rounded-3xl">
+					<div className="max-w-[80vw] h-4/5 grid grid-cols-1 2xl:grid-cols-2 gap-4 mx-auto">
+						<Card className="rounded-3xl col-span-1">
 							<CardContent>
 								<TypingAnimation
 									className="lg:text-7xl text-black dark:text-white font-bold inter-var text-center uppercase my-10"
 									text="About Us"
 								/>
-								<div className="col-span-1 p-4">
-									<img src={bg4} alt="image" className="md:h-3/4 p-2 mx-auto" />
+								<div className="p-4">
+									<img src={bg4} alt="image" className="h-full md:h-3/4 p-2 mx-auto" />
 								</div>
 							</CardContent>
 						</Card>

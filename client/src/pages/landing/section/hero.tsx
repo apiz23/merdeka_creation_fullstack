@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import TypingAnimation from "@/components/magicui/typing-animation";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadcn/button";
 import bg1 from "@/assets/bg1.jpg";
 import bg2 from "@/assets/bg2.jpg";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
@@ -110,7 +110,7 @@ const ParallaxImages = () => {
 				src="https://i.pinimg.com/564x/1d/04/45/1d0445b1090ddbb03af21b8cbde44686.jpg"
 				alt="Orbiting satellite"
 				start={20}
-				end={-300}
+				end={-500}
 				className="ml-28 w-5/12 rounded-lg shadow-xl"
 			/>
 		</div>
@@ -179,7 +179,7 @@ const MerdekaHero = () => {
 					<Link to="contact" smooth={true} duration={500}>
 						<Button variant="default" className="rounded-full">
 							Contact us to learn more or ask any questions.
-						</Button>{" "}
+						</Button>
 					</Link>
 				</div>
 			</div>

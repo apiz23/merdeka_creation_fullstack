@@ -15,10 +15,10 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+} from "@/components/shadcn/dialog";
+import { Button } from "@/components/shadcn/button";
 import { Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/shadcn/badge";
 
 interface CardType {
 	urlPic: string;
@@ -106,7 +106,7 @@ const HorizontalScrollCarousel = () => {
 	const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
 	return (
-		<section ref={targetRef} className="relative h-[300vh]">
+		<section ref={targetRef} className="relativ h-[300vh]">
 			<div className="sticky top-0 flex h-screen items-center overflow-x-hidden">
 				<motion.div style={{ x }} className="flex gap-4">
 					{cards.map((card) => {
@@ -125,14 +125,12 @@ const Card = ({ card }: { card: CardType }) => {
 				<img
 					alt="pic"
 					src={card.urlPic}
-					className="rounded-bl-3xlrounded-tr-3xl object-cover h-[50vh] md:h-[60vh] w-full transition-transform duration-300 group-hover:scale-110"
+					className="rounded-bl-3xl rounded-tr-3xl object-cover h-[50vh] md:h-[60vh] w-full transition-transform duration-300 group-hover:scale-110"
 				/>
 
 				<div className="mt-10 sm:flex sm:items-center sm:justify-center sm:gap-4">
 					<strong className="font-medium capitalize">{card.title}</strong>
-
 					<span className="hidden sm:block sm:h-px sm:w-8 sm:bg-yellow-500"></span>
-
 					<Badge variant="default" className="mt-0.5 sm:mt-0 capitalize">
 						{card.shop}
 					</Badge>
